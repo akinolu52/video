@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    background:#ccc;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.video {
+    width: 100%;
+}
+.c-video {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    height: 100%;
+}
+.c-video video {
+    height: 100%;
+}
+.controls {
+    display: none;
+}
+.placeholder-text {
+    display: flex;
+    position: absolute;
+    bottom: 6rem;
+    width: 93%;
+    flex-wrap: wrap;
+    color: #F8E9E1;
+    margin: 0 2rem;
+}
+.placeholder-text p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+}
+.placeholder-text h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+.c-video:hover .controls {
+    display: flex;
+    position: absolute;
+    bottom: 6rem;
+    width: 100%;
+    flex-wrap: wrap;
+    transform: translateY(100%) translateY(-5px);
+    transition: all 0.2s;
+}
+.c-video:hover .placeholder-text {
+    display: none;
+}
+.button {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-basis: 100%;
+}
+.button button {
+    margin-left: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background: none;
+} 
+.button button:before {
+    width: 30px;
+    height: 35px;
+    display: inline-block;
+}
+.button button.play:before {
+    content: url('./images/play.png');
+}
+.button button.pause:before {
+    content: url('./images/pause.png');
+}
+.button button#replay:before {
+    content: url('./images/replay.png');
+}
+.button button#fullscreen:before {
+    content: url('./images/fullscreen.png');
+}
+button.mute:before {
+    content: url('./images/mute.png');            
+}
+.button button.unmute:before {
+    content: url('./images/unmute.png');            
+}
+.bar {
+    height: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+}
+.bar-length {
+    height: 10px;
+    width: 10px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: red;
+}
